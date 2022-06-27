@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include_once "../dbconnect/dbconnect.php";
+ ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,11 +32,12 @@
 </html>
 
 <?php 
-    session_start();
-    include_once "../dbconnect/dbconnect.php";
     if(isset($_POST['dangnhap'])){
         $name_login= $_POST['name_login'];
         $pws= $_POST['pws'];
+
+        echo $name_login;
+
         $sql = "SELECT * FROM signin WHERE name_login='".$name_login."' AND pws='".$pws."' LIMIT 1";
         $row = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($row);

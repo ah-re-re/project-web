@@ -1,73 +1,15 @@
 <?php 
-	include_once "../connecting/connecting.php"; 
+// session_start();
+// include_once "../dbconnect/dbconnect.php";    
 
-	$id=$_GET['id'];
-	
-
-	$sql = "SELECT * FROM nha_dat_ban WHERE 1";
-	$values = mysqli_query($conn, $sql);
-	foreach ($values as $v) {
-		if ($id == $v["id"]) {
-			$gioi_thieu = $v["gioi_thieu"];
-			$gia = $v["gia"];
-			$lien_he = $v["lien_he"];
-			$vi_tri = $v["vi_tri"];
-			$mo_ta = $v["mo_ta"];
-			$anh = $v["anh"];
-
-		}
-	}
+//         if(isset($_SESSION['login']) == true){
+//             $_SESSION['login'] = $name_login;
+//              header("location:dangtin.php");
+//         }else{
+//             echo 'ád';
+//             // header("location:../login-out/dangnhap.php");
+//         }
 ?>
-
-	<!-- <p> dang tin bat dong san</p>
-<table>
-	<form method="POST" action="sua.php?id=<?php echo $_GET['id'] ?>">
-		<tr>
-			<td>gioi thieu</td>
-			<td><textarea rows="5" name="gioi_thieu">
-				<?php echo $gioi_thieu ?>
-			</textarea></td>
-		</tr>
-		<tr>
-			<td>gia</td>
-			<td><input type="number" name="gia" value="<?php echo $gia ?>" > </td>
-		</tr>
-		<tr>
-			<td>lien he</td>
-			<td><input type="number" name="lien_he" value="<?php echo $lien_he ?>"></td>
-		</tr>
-		<tr>
-			<td>vi tri</td>
-			<td><input type="text" name="vi_tri" value="<?php echo $vi_tri ?>"></td>
-		</tr>
-		<tr>
-			<td>mo ta</td>
-			<td><textarea rows="5" name="mo_ta">
-				<?php echo $mo_ta ?>
-			</textarea></td>
-		</tr>
-		<tr>
-			<td>anh</td>
-			<td><input type="file" name="anh" value="<?php echo $anh ?>"></td>
-		</tr>
-		<tr>
-			<td>chon san pham</td>
-			<td>
-				<select name="ban_thue_dat" >
-					<option>thue</option>
-					<option>ban</option>
-					<option>dat trong</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td><input type="submit" name="suatin" value="sửa tin bất động sản"></td>
-		</tr>
-
-
-	</form>
-</table> -->
-
 <style type="text/css">
     #wrapper {
         width:450px;
@@ -178,33 +120,29 @@
 </style>
 <body>
     <div id="wrapper">
-        <form method="POST" action="sua.php?id=<?php echo $_GET['id'] ?>">
+        <form method="POST" action="xu-li-dang-tin.php">
             <fieldset>
-                <legend>sửa</legend>
+                <legend> Form</legend>
                 <div>
-                    <textarea rows="5" name="gioi_thieu">
-				<?php echo $gioi_thieu ?>
-			</textarea>
+                    <input type="text" name="gioi_thieu" placeholder="Giới thiệu"/>
                 </div>
                 <div>
-                    <input type="number" name="gia" value="<?php echo $gia ?>" >
+                    <input type="number" name="gia" placeholder="giá">
                 </div>
                 <div>
-                    <input type="number" name="lien_he" value="<?php echo $lien_he ?>">
+                    <input type="number" name="lien_he" placeholder="số điện thoại">
                 </div>
                 <div>
-                    <input type="text" name="vi_tri" value="<?php echo $vi_tri ?>">
+                    <input type="text" name="vi_tri" placeholder="vị trí">
                 </div>
                 
                 
                 <div>
                     <div class="small">this textarea is just for test so you can see the placeholder working on textarea as well</div>
-                    <textarea rows="5" name="mo_ta">
-				<?php echo $mo_ta ?>
-			</textarea>
+                    <textarea rows="5" name="mo_ta"></textarea>
                 </div>    
                 <div>
-                    <input type="file" name="anh" value="<?php echo $anh ?>">
+                    <input type="file" name="anh">
                 </div>
                 <div>
                 <select name="ban_thue_dat">
@@ -214,9 +152,11 @@
                </select>
                </div>
                 <input type="submit" name="dangtin" value="Đăng tin">
-                
+                <a href="../trangchu.php">Quay về trang chủ</a><br>
+                <a href="../admin/login/login.php">Quay về trang quản trị</a>
             </fieldset>    
         </form>
+    
     </div>
 </body>
 </html>

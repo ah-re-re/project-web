@@ -1,33 +1,33 @@
 
-	<p> dang tin bat dong san</p>
+	<p> Đăng tin bất động sản</p>
 <table>
 	<form method="POST" action="xu-li-dang-tin.php">
 		<tr>
-			<td>gioi thieu</td>
+			<td>Giới thiệu</td>
 			<td><textarea rows="5" name="gioi_thieu"></textarea></td>
 		</tr>
 		<tr>
-			<td>gia</td>
+			<td>giá</td>
 			<td><input type="number" name="gia"></td>
 		</tr>
 		<tr>
-			<td>lien he</td>
+			<td>Liên hệ</td>
 			<td><input type="number" name="lien_he"></td>
 		</tr>
 		<tr>
-			<td>vi tri</td>
+			<td>Vị trí</td>
 			<td><input type="text" name="vi_tri"></td>
 		</tr>
 		<tr>
-			<td>mo ta</td>
+			<td>Mô tả</td>
 			<td><textarea rows="5" name="mo_ta"></textarea></td>
 		</tr>
 		<tr>
-			<td>anh</td>
+			<td>Ảnh</td>
 			<td><input type="file" name="anh"></td>
 		</tr>
 		<tr>
-			<td>chon san pham</td>
+			<td>Chọn loại hình</td>
 			<td>
 				<select name="ban_thue_dat">
 					<option>thue</option>
@@ -37,7 +37,8 @@
 			</td>
 		</tr>
 		<tr>
-			<td><input type="submit" name="dangtin" value="dang tin bat dong san"></td>
+			<td><input type="submit" name="dangtin" value="Đăng tin"></td>
+			<td><a href="../trangchu.php">Quay về trang chủ</a></td>
 		</tr>
 
 

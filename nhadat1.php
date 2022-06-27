@@ -75,7 +75,7 @@
             font-size: medium;
         }
     </style>
-     <header class="header" id="header">
+     <header class="header" id="header">  <!-- header -->
         <div class="navigation">
           <div class="nav-center container d-flex">
             <a href="#" class="logo"><img src="images/estate.png"></a>
@@ -97,16 +97,16 @@
                 <i class="bx bx-menu-alt-left"></i>
               </div>
             </div>
-          </div>
+          </div>  <!-- header -->
     <div id="wrapper">
         <div class="headline">
             <h3>THÔNG TIN CHI TIẾT </h3>
         </div>
     <div id="content">
-         <?php 
-         include_once "dbconnect/dbconnect.php";
+         <?php                                          
+         include_once "dbconnect/dbconnect.php";    //gọi table nha dat ban theo id từ database
         $id = $_GET['id'];
-        
+                                                    
         $sql = "SELECT * FROM `nha_dat_ban` WHERE `id`=$id";
         $ressut = mysqli_query($conn,$sql);
         while ($roww = mysqli_fetch_array($ressut)) {

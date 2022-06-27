@@ -154,7 +154,7 @@
                     <div class="product-top">
                      <a href="" class="product-thumb"><img src = <?php echo "./images/".$row["anh"];?> ></a>
 
-                    <a href="nhadat1.php" class="buy-now">Xem ngay</a>
+                    <a href="nhadat1.php?id=<?php echo $row['id'];?>" class="buy-now">Xem ngay</a>
 
                     </div>
                     <div class="product-info">

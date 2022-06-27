@@ -31,7 +31,7 @@
           <a href="" class="logo"><img src="images/estate.png"></a>
           <ul class="nav-list d-flex">
             <li class="nav-item">
-              <a href="trangchu.php" class="nav-link">Trang chủ</a>
+              <a href="user.php" class="nav-link">Trang chủ</a>
             </li>
             <li class="nav-item">
               <a href="nhadatban.php" class="nav-link">Nhà đất bán</a>
@@ -42,31 +42,13 @@
             <li class="nav-item">
               <a href="dattrong.php" class="nav-link">Đất trồng</a>
             </li>
-            <!-- <button class="button">
-              <a href="./login-out/dangnhap.php" class="fontbutton">Đăng nhập</a> 
-            </button> -->
-
-            <!-- <button class="button">
-              <a href="./login-out/sign_in.php" class="fontbutton">Đăng ký</a> 
-            </button> -->
-              <?php if (isset($_SESSION['login'])) { ?>
-                <span><?php echo $_SESSION['login']?></span>
+             <button class="button">
+            <a href="./login-out/dangnhap.php" class="fontbutton">Đăng xuất</a> </button>
+                
+            <!-- <button class="button"> -->
+              <!-- <a href="./login-out/sign_in.php" class="fontbutton">Đăng ký</a> </button> -->
               <button class="button">
-                      <a href="xl.php" class="fontbutton">Đăng tin</a>
-              </button>
-              <button class="button">
-                      <a href="./login-out/logout.php" class="fontbutton">Đăng xuất</a>
-              </button>
-            <?php }else { ?>
-              <button class="button">
-              <a href="./login-out/dangnhap.php" class="fontbutton">Đăng nhập</a> 
-            </button>
-
-            <button class="button">
-              <a href="./login-out/sign_in.php" class="fontbutton">Đăng ký</a> 
-            </button>
-
-           <?php } ?>
+                <a href="crurd/dangtin.php" class="fontbutton">Đăng tin</a> </button>
                 <button class="button">
                 <a href="admin/login/login.php" class="fontbutton">Admin</a> </button>
           </ul>
